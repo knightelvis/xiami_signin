@@ -40,7 +40,7 @@ login_response = urllib.request.urlopen(login_request).read().decode()
 mid_headers = {'Referer' : 'http://www.xiami.com/profile', 'User-Agent' : 'Opera/9.60'}
 mid_request = urllib.request.Request('http://www.xiami.com/web', None, mid_headers)
 mid_response = urllib.request.urlopen(mid_request).read().decode()
-#print(mid_response)
+
 
 # To check if we have already signed in.
 days_pattern = re.compile(r'已连续签到(\d+)天')
