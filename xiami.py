@@ -16,8 +16,8 @@ login_url = 'http://www.xiami.com/web/login'
 
 
 login_data = urllib.parse.urlencode({
-    'email' : '810233438@qq.com',
-    'password' : 'XXb1860Jase',
+    'email' : 'Your email',
+    'password' : 'Your password',
     # 抓包软件得出的数据。下面那个是登录 
     'LoginButton' : '%E7%99%BB%E5%BD%95',
 })
