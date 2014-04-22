@@ -49,11 +49,11 @@ if result_match:
     print('success! ' + 'You have checked in ' + result_match + ' days')
 else:
     # If not already signed in. This is the url for check in.
-    url_pattern = re.compile(r'<a class="check_in" href="/web/checkin/id/(\d        +)">每日签到</a>')
+    url_pattern = re.compile(r'<a class="check_in" href="/web/checkin/id/(\d+)">每日签到</a>')
     url_match  = url_pattern.findall(mid_response)[0]
     checkin_url = 'http://www.xiami.com/web/checkin/id/' + url_match
 
-    checkin_headers = {'Referer' : 'http://www.xiami.com/web', 'User-Agent'         : 'Opera/9.60'}
+    checkin_headers = {'Referer' : 'http://www.xiami.com/web', 'User-Agent' : 'Opera/9.60'}
 
     checkin_request = urllib.request.Request(checkin_url, None, checkin_headers)
     checkin_response = urllib.request.urlopen(checkin_request).read().decode()
